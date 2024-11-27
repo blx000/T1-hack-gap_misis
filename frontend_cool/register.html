@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        .circle:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 15%;
+        }
+        .circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 40%;
+            left: 70%;
+            animation-delay: 2s;
+        }
+        .circle:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            left: 30%;
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96 z-10">
+        <h2 class="text-2xl font-bold mb-6 text-center">Регистрация</h2>
+        <form>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    <i class="fas fa-envelope"></i> Почта
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Почта">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                    <i class="fas fa-lock"></i> Пароль
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Пароль">
+            </div>
+            <div class="flex items-center justify-center mb-4">
+                <button class="bg-blue-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                    Зарегистрироваться
+                </button>
+            </div>
+            <div class="flex items-center justify-center">
+                <button class="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="window.location.href='index.html'">
+                    На главную
+                </button>
+            </div>
+        </form>
+        <p class="text-center text-gray-600 text-sm mt-4">
+            Уже есть аккаунт? <a href="login.html" class="text-blue-500 hover:text-blue-800">Войти</a>
+        </p>
+    </div>
+</body>
+</html>
+
